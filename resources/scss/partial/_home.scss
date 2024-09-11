@@ -1,6 +1,12 @@
 div.container {
     div.row {
         div.card {
+            img {
+                margin-top: 10px;
+                border: 2px solid black;
+
+            }
+
             div.card-body {
                 h5 {
                     height: 50px;

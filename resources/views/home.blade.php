@@ -18,7 +18,7 @@
                     <img src="{{ $movie->img }}" class="card-img-top" alt="{{ $movie->title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ $movie->title }}</h5>
-                        <p class="card-text">{{ $movie->description }}</p>
+                        <p class="card-text"><em>{{ $movie->description }}</em></p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>Titolo originale: </b><br>{{ $movie->original_title }}</li>
