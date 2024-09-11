@@ -1,0 +1,16 @@
+div.container {
+    div.row {
+        div.card {
+            div.card-body {
+                h5 {
+                    height: 50px;
+                }
+
+                p.card-text {
+                    min-height: 200px;
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+}

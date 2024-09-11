@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    @dump($movies)
+    {{-- @dump($movies) --}}
     <div class="container my-5">
         <div class="row">
 
@@ -21,10 +21,10 @@
                         <p class="card-text">{{ $movie->description }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Titolo originale: {{ $movie->original_title }}</li>
-                        <li class="list-group-item">Nazionalità: {{ $movie->nationality }}</li>
-                        <li class="list-group-item">Data: {{ $movie->date }}</li>
-                        <li class="list-group-item">Voto: {{ $movie->vote }}</li>
+                        <li class="list-group-item"><b>Titolo originale: </b><br>{{ $movie->original_title }}</li>
+                        <li class="list-group-item"><b>Nazionalità: </b><br>{{ $movie->nationality }}</li>
+                        <li class="list-group-item"><b>Data: </b><br>{{ $movie->date }}</li>
+                        <li class="list-group-item"><b>Voto: </b><br>{{ $movie->vote }}</li>
 
                     </ul>
                     <div class="card-body">
