@@ -15,6 +15,7 @@
 
             @foreach ($movies as $movie)
                 <div class="card" style="width: 15rem;">
+                    <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ $movie->title }}</h5>
                         <p class="card-text">{{ $movie->description }}</p>
@@ -23,6 +24,7 @@
                         <li class="list-group-item">Titolo originale: {{ $movie->original_title }}</li>
                         <li class="list-group-item">Nazionalità: {{ $movie->nationality }}</li>
                         <li class="list-group-item">Data: {{ $movie->date }}</li>
+                        <li class="list-group-item">Voto: {{ $movie->vote }}</li>
 
                     </ul>
                     <div class="card-body">
