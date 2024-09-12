@@ -4,12 +4,12 @@
 @section('content')
     {{-- @dump($movies) --}}
     <div class="container my-5">
+        <h1>{{ $title }}</h1>
         <div class="row">
-
-            <h1></h1>
             {{-- <img src="{{ Vite::asset('resources/img/colibri.jpg') }}" alt="" class="img-fluid"> --}}
 
-            @foreach ($movies as $movie)
+
+            @forelse ($movies as $movie)
                 <div class="card" style="width: 15rem;">
                     <img src="{{ $movie->img }}" class="card-img-top" alt="{{ $movie->title }}">
                     <div class="card-body">
@@ -23,12 +23,16 @@
                         <li class="list-group-item"><b>Voto: </b><br>{{ $movie->vote }}</li>
 
                     </ul>
+                    <a href="{{ route('movieDetails', ['id' => $movie->id]) }}" class="btn btn-success">Dettagli</a>
                     <div class="card-body">
                         {{-- <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a> --}}
                     </div>
                 </div>
-            @endforeach
+
+            @empty
+                <h2>La ricerca non ha dato nessun risultato</h2>
+            @endforelse
 
 
 
@@ -40,5 +44,5 @@
 
 
 @section('titlePage')
-    home
+    Home
 @endsection
